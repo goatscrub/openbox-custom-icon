@@ -48,7 +48,7 @@ function match(subject, pattern)
     return string.match(subject, pattern) or false
 end
 
--- try to find a match between application
+-- try to find a match against window attributes and configuration
 function custom_icon(applications)
     for index, attribute in pairs(applications) do
         -- by default 'match_if' is set to 'all'
