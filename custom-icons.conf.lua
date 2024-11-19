@@ -4,16 +4,17 @@
 ---- If seticon_binary is not accessible from environment PATH variable,
 ---- you can specify here full binary path as follows: seticon_binary='/path/to/binary'
 ----
----- xseticon works only with PNG files
----- SVG file can be converted with imagick:
+---- /!\ xseticon works only with PNG files /!\
+---- SVG file can be converted with imagemagick:
 ---- $ convert -background none -alpha activate input.svg output.png
 -- seticon_binary='xseticon'
 
----- extension added to icon define into configuration, default value 'png'
+---- Icon path extension, define into devilspie2 configuration.
+---- Default value: 'png'
 --icon_extension='png'
 
----- icon path prefix added to icon define into configuration
----- default: os.getenv('HOME')..'/.config/openbox/custom-icons/'
+---- Icon path prefix, define into devilspie2 configuration.
+---- Default: os.getenv('HOME')..'/.config/openbox/custom-icons/'
 -- icon_prefix=os.getenv('HOME')..'/.config/openbox/custom-icons/'
 
 -- applications = {

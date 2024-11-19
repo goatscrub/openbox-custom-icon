@@ -1,8 +1,8 @@
 # openbox-custom-icon
-Under `openbox` window manager, sets window icons with help of `devilspie2` and `xseticon`.
+Under `openbox` window manager, sets application window icons with help of `devilspie2` and `xseticon`.
 
 Into this repository, you will find a main lua script for `devilspie2` and a configuration lua script.
-In 95% of time, the first one, no needs changes. The second one, contains an array (`applications`) in which you configure icons against window attributes.
+In 95% of time, the first one, no needs changes. The second one, contains an array (`applications`) in which you configure icons against application window attributes.
 
 Theses scripts are essentially helpers functions, to helps you matching more easily window attributes, to make configuration process simpler as possible.
 

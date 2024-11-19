@@ -25,7 +25,7 @@ function same(subject, pattern)
     return subject == pattern
 end
 
--- Returns 'true' if any of test into 'tests' succeeds, else 'false'
+-- Returns 'true' if at least one test into 'tests' succeeds, else 'false'
 function any(tests)
     for index, test in pairs(tests) do
         if test then return true end
@@ -33,7 +33,7 @@ function any(tests)
     return false
 end
 
--- Returns 'true' if all test into 'tests' succeeds, else 'false'
+-- Returns 'true' when all test into 'tests' succeeds, else 'false'
 function all(tests)
     for index, test in pairs(tests) do
         if not test then return false end
@@ -43,12 +43,13 @@ end
 
 -- A convenient string.match wrapper function
 -- Returns 'true' if match, or 'false' instead of 'nil'
--- (with lua, nil value into a table, stops its elements iteration)
+-- (with lua, nil value into a table, stops its elements iteration.
+-- Yep, I don't have a huge experience with this language.)
 function match(subject, pattern)
     return string.match(subject, pattern) or false
 end
 
--- try to find a match against window attributes and configuration
+-- Try to find a match against window attributes and configuration
 function custom_icon(applications)
     for index, attribute in pairs(applications) do
         -- by default 'match_if' is set to 'all'
@@ -71,7 +72,7 @@ function main()
     end
 end
 
--- if configuration file found, call main function
+-- Call main function when a configuration file found
 configuration_file=io.open(configuration, 'r')
 if configuration_file ~= nil then
     io.close(configuration_file)
