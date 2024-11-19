@@ -62,7 +62,7 @@ applications = {
         icon = 'xterm'
     },
     { -- gvim
-        search =  { same(get_class_instance_name(), 'gvim') },
+        search =  { match(get_class_instance_name(), '^[gG]?vim') },
         icon = 'vim',
     },
     { -- gmpc
